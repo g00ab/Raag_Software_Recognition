@@ -38,7 +38,7 @@ class _RaagRecorderPageState extends State<RaagRecorderPage> {
   String result = "No prediction yet";
 
   // 🔁 Replace with your deployed API endpoint
-  final String apiUrl = "http://localhost:8000/predict";
+  final String apiUrl = "https://raag-software-recognition.onrender.com";
 
   Future<void> startRecording() async {
     // request microphone access and keep stream reference for later stopping

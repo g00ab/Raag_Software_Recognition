@@ -129,7 +129,7 @@ def predict_raag(file_path):
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     # Save uploaded audio temporarily
-    suffix = os.path.splitext(file.filename or "audio.wav")[1] or ".wav"
+    suffix = os.path.splitext(file.filename or "audio.mp3")[1] or ".mp3"
     with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
         tmp.write(await file.read())
         audio_path = tmp.name
